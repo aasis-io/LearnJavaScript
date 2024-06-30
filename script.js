@@ -219,3 +219,13 @@ const obj = {
 
 delete obj.age;
 console.log(obj);
+
+
+////
+const myOBJ = {
+    name: "Sita Devi",
+    age: 56,
+  };
+  
+  delete myOBJ.age;
+  console.log(obj);
