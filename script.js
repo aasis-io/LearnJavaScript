@@ -138,15 +138,84 @@
 
 //String Method
 
-const result = "Hello World";
-//length
-console.log(result.length);
+// const result = "Hello World";
+// //length
+// console.log(result.length);
 
-//chatAt
-console.log(result.charAt(4));
+// //chatAt
+// console.log(result.charAt(4));
 
-//indexOf
-console.log(result.indexOf("o"))
+// //indexOf
+// console.log(result.indexOf("o"));
 
-//lastIndexOf
-console.log(result.lastIndexOf("o"))
+// //lastIndexOf
+// console.log(result.lastIndexOf("o"));
+
+// //toLowerCase
+// console.log(result.toLowerCase());
+
+// //toUpperCase
+// console.log(result.toUpperCase());
+
+// //replace
+// console.log(result.replace("World", "everyone"));
+
+// //includes
+// console.log(result.includes("World"));
+
+// //slice
+// console.log(result.slice(1, 6));
+
+//concat
+// console.log(result.concat(" " + "I love JS"));
+
+// //let output = "         B  C  A"
+// let output = "    BCA";
+// console.log(output.trim())
+
+// //split
+// console.log(result.split(" "))
+
+// //concatination
+// let x = "Hello World";
+// let y = "I love JS!";
+// let z = "Because it's fun";
+// console.log(x + " " + y + " " + z);
+
+// const a = 80,
+//   b = 60;
+
+// const result = a + b;
+// // console.log("The sum of two number is:" + result);
+// console.log(`The sum of two number is: ${result}`);
+
+// Assignment Operator
+// let y = 80;
+// y += 10;
+// console.log(y);
+
+//
+// let a = 10;
+// let b = 5;
+// let c = "10";
+// console.log(a == c);
+// console.log(a === c);
+// console.log(a != b);
+// console.log(a !== c);
+
+// let ageGroup = 18;
+// console.log(ageGroup >= 18 ? "You can vote" : "You can't");
+
+//Unary Operators
+let x = "123";
+let y = +x; //positive
+console.log(y);
+console.log(typeof y);
+
+const obj = {
+  name: "Sita Devi",
+  age: 56,
+};
+
+delete obj.age;
+console.log(obj);
