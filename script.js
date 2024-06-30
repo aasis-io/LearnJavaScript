@@ -63,6 +63,90 @@
 // console.log(typeof y);
 
 // Symbol
-const y = Symbol("Hi!");
-console.log(y);
-console.log(typeof y);
+// const y = Symbol("Hi!");
+// console.log(y);
+// console.log(typeof y);
+
+// let x = 8.68;
+// console.log(x);
+// console.log(typeof x);
+
+// Manual Type Consversion
+// const result = "1233";
+// const output = Number(result);
+
+// console.log(result);
+// console.log(typeof result);
+// console.log(output);
+// console.log(typeof output);
+
+///////
+
+// const result = "1233";
+// const output = parseInt(result);
+
+// console.log(result);
+// console.log(typeof result);
+// console.log(output);
+// console.log(typeof output);
+
+////////
+
+// const result = "6.78";
+// const output = parseFloat(result);
+
+// console.log(result);
+// console.log(typeof result);
+// console.log(output);
+// console.log(typeof output);
+
+////////////
+// const result = 678;
+// const output = String(result);
+
+// console.log(output);
+// console.log(typeof output);
+
+// const result = 678;
+// const output = result.toString();
+
+// console.log(output);
+// console.log(typeof output);
+
+//////
+// const isMarried = false;
+// const ans = String(isMarried);
+
+// console.log(ans);
+// console.log(typeof ans);
+
+//Variables
+//Objects
+
+// const obj={
+//     name: "Ashish Thapa",
+//     age: 21,
+// }
+// console.log(typeof obj);
+
+// const arr = [3, 4, 5, 6, 7];
+// console.log(typeof arr);
+
+// const date = new Date();
+// console.log(date);
+// console.log(typeof date);
+
+//String Method
+
+const result = "Hello World";
+//length
+console.log(result.length);
+
+//chatAt
+console.log(result.charAt(4));
+
+//indexOf
+console.log(result.indexOf("o"))
+
+//lastIndexOf
+console.log(result.lastIndexOf("o"))
