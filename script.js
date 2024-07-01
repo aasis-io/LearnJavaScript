@@ -207,25 +207,131 @@
 // console.log(ageGroup >= 18 ? "You can vote" : "You can't");
 
 //Unary Operators
-let x = "123";
-let y = +x; //positive
-console.log(y);
-console.log(typeof y);
+// let x = "123";
+// let y = +x; //positive
+// console.log(y);
+// console.log(typeof y);
 
-const obj = {
-  name: "Sita Devi",
-  age: 56,
-};
+// const obj = {
+//   name: "Sita Devi",
+//   age: 56,
+// };
 
-delete obj.age;
-console.log(obj);
+// delete obj.age;
+// console.log(obj);
 
+// ////
+// const myOBJ = {
+//     name: "Sita Devi",
+//     age: 56,
+//   };
 
-////
-const myOBJ = {
-    name: "Sita Devi",
-    age: 56,
-  };
-  
-  delete myOBJ.age;
-  console.log(obj);
+//   delete myOBJ.age;
+//   console.log(obj);
+
+// let email = "ashishthapa@gmail.com";
+// let password = "password";
+
+// if (email === "ashishthapa@gmail.com" && password === "password") {
+//   console.log("Login Successfull!");
+// } else {
+//   console.log("Invalid Credentials");
+// }
+
+// SEE grade check
+
+// let grade = 98;
+
+// if (grade > 90) {
+//   console.log("A+");
+// } else if (grade >= 80 && grade <= 90) {
+//   console.log("A");
+// } else if (grade >= 70 && grade <= 80) {
+//   console.log("B+");
+// } else if (grade >= 60 && grade <= 70) {
+//   console.log("B");
+// } else if (grade >= 50 && grade <= 60) {
+//   console.log("C+");
+// } else if (grade >= 40 && grade <= 50) {
+//   console.log("C+");
+// } else {
+//   console.log("Non Graded");
+// }
+
+// let weather = "rainy";
+
+// if (weather === "sunny") {
+//   console.log("Today is a sunny day");
+// } else if (weather === "winter") {
+//   console.log("Today is a cold day");
+// } else if (weather === "rainy") {
+//   console.log("Today is a rainy day!");
+// } else {
+//   console.log("Invalid Weather!");
+// }
+
+// const d = new Date().getDay();
+
+// switch (d) {
+//   case 0:
+//     console.log("Today is sunday!");
+//     break;
+
+//   case 1:
+//     console.log("Today is monday!");
+//     break;
+
+//   case 2:
+//     console.log("Today is tuesday!");
+//     break;
+
+//   case 3:
+//     console.log("Today is wednesday!");
+//     break;
+
+//   case 4:
+//     console.log("Today is thrusday!");
+//     break;
+
+//   case 5:
+//     console.log("Today is friday!");
+//     break;
+
+//   case 6:
+//     console.log("Today is saturday!");
+//     break;
+
+//   default:
+//     console.log("Invalid weather");
+// }
+
+let status = 200;
+
+switch (status) {
+  case 201:
+    console.log("Created");
+    break;
+
+  case 400:
+    console.log("Bad Request");
+    break;
+
+  case 401:
+    console.log("Unauthorized");
+    break;
+
+  case 403:
+    console.log("Forbidden");
+    break;
+
+  case 200:
+    console.log("Ok");
+    break;
+
+  case 500:
+    console.log("Internal server error");
+    break;
+
+  default:
+    console.log("Error");
+}
