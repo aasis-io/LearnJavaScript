@@ -344,7 +344,149 @@
 
 // }
 
-const arr = [1, 2, 3, 4, 5];
-console.log(arr);
-console.log(arr[2]);
-console.log(typeof arr)
+/*
+====
+ARRAY
+====
+*/
+
+// const arr = [1, 2, 3, 4, 5];
+// console.log(arr);
+// console.log(arr[2]);
+// console.log(typeof arr)
+
+// let arr = [1, 2, 3, 4, 5, 3]; //data structure
+
+//Splice //removes the data from array
+// arr.splice(1,3);
+// console.log(arr);
+
+//slice //prints the defined set
+// let sliced = arr.slice(1,3); //prints index 1 and 2
+// console.log(sliced);
+
+// check index
+// console.log(arr.indexOf(3))
+// console.log(arr.lastIndexOf(3))
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// //push
+// let newArr = arr.push(12);
+// console.log(arr);
+
+// //pop
+// arr.pop(12);
+// console.log(arr);
+
+// //push
+// arr.shift(12);
+// console.log(arr);
+
+// //pop
+// arr.unshift(12);
+// console.log(arr);
+
+//includes
+// if (arr.includes(4)){
+//     console.log("4 is present in array")
+// }
+
+// let result = arr.includes(4);
+// console.log(result);
+
+//Join
+// const output = ["JS", "is", "Fun"];
+// console.log(output.join(" "));
+
+//////
+
+// let arr = [];
+// let sum = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   arr.push(i);
+// }
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(`The sum of the given numbers is ${sum}`);
+
+/////OBJECTS IN JS
+
+// const person = {
+//   name: "Ashish",
+//   age: 21,
+//   address: {
+//     street: "Satungal",
+//     city: "Kathamandu",
+//     country: "Nepal",
+//   },
+//   occupation: "Student",
+//   education: "BCA",
+//   isMarried: false,
+//   greet: function () {
+//     console.log(`Hello, I am ${this.name} and i am ${this.age} years old!`);
+//   },
+// };
+// person.greet();
+
+// //Destructuring
+// const {
+//   name,
+//   age,
+//   isMarried,
+//   address: { street, city, country },
+// } = person;
+
+// console.log(name, age, isMarried, street, city, country);
+
+////Function in JavaScript
+// function myFunction(){
+//     console.log("Hey Function");
+// }
+
+// myFunction();
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// console.log(`The sum is ${sum(2, 4)}`);
+
+// function Radius(radius) {
+//   return Math.PI * radius * radius;
+// }
+
+// console.log(`The area of circle is ${Math.round(Radius(6), 4)}`);
+
+// Function to calculate the sum of provided numbers
+// function calculateTotal(...numbers) {
+//     return numbers.reduce((sum, number) => sum + number, 0);
+// }
+
+// // Example usage
+// const sum = calculateTotal(1, 2, 3, 4, 5);
+// console.log(`The sum is: ${sum}`);
+
+function calculateTotal(cartItems, taxRate) {
+  let total = 0;
+  for (i = 0; i < cartItems.length; i++) {
+    total += cartItems[i].price * cartItems[i].quantity;
+  }
+  total += total * taxRate;
+  return total;
+}
+
+let cart = [
+  { name: "Dr Martin", price: 8000, quantity: 2 },
+  { name: "SB Dunk", price: 4000, quantity: 3 },
+];
+
+const result = calculateTotal(cart, 0.02);
+
+console.log(`your full and final payment is:${result}`);
