@@ -473,20 +473,28 @@ ARRAY
 // const sum = calculateTotal(1, 2, 3, 4, 5);
 // console.log(`The sum is: ${sum}`);
 
-function calculateTotal(cartItems, taxRate) {
-  let total = 0;
-  for (i = 0; i < cartItems.length; i++) {
-    total += cartItems[i].price * cartItems[i].quantity;
-  }
-  total += total * taxRate;
-  return total;
+// function calculateTotal(cartItems, taxRate) {
+//   let total = 0;
+//   for (i = 0; i < cartItems.length; i++) {
+//     total += cartItems[i].price * cartItems[i].quantity;
+//   }
+//   total += total * taxRate;
+//   return total;
+// }
+
+// let cart = [
+//   { name: "Dr Martin", price: 8000, quantity: 2 },
+//   { name: "SB Dunk", price: 4000, quantity: 3 },
+// ];
+
+// const result = calculateTotal(cart, 0.02);
+
+// console.log(`your full and final payment is:${result}`);
+
+function convert() {
+  const meterInput = document.getElementById("meterInput").value;
+  const result = meterInput * 3.28084;
+  document.getElementById(
+    "result"
+  ).textContent = `${meterInput} meters is equal to ${result.toFixed(2)} feet`;
 }
-
-let cart = [
-  { name: "Dr Martin", price: 8000, quantity: 2 },
-  { name: "SB Dunk", price: 4000, quantity: 3 },
-];
-
-const result = calculateTotal(cart, 0.02);
-
-console.log(`your full and final payment is:${result}`);
