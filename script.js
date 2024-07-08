@@ -499,15 +499,146 @@ ARRAY
 //   ).textContent = `${meterInput} meters is equal to ${result.toFixed(2)} feet`;
 // }
 
-function myFunction(){
-  let a = prompt("Enter first number?");
-  let b = prompt("Enter second number?");
+// function myFunction(){
+//   let a = prompt("Enter first number?");
+//   let b = prompt("Enter second number?");
 
-  let result = Number(a) + Number(b);
-  if(result){
-    alert(`The sum of two numbers is: ${result}`);
-  }
+//   let result = Number(a) + Number(b);
+//   if(result){
+//     alert(`The sum of two numbers is: ${result}`);
+//   }
 
+// }
+
+// myFunction();
+
+//Global Scoping
+// var x = 90;
+// let y = 70;
+// const z = 30;
+
+// function myPrint() {
+//   console.log(x, y, z);
+// }
+
+// myPrint();
+
+//Function Scope
+// function myPrint() {
+//   var x = 90;
+//   let y = 70;
+//   const z = 30;
+//   console.log(x, y, z);
+// }
+
+// myPrint();
+
+//Scope defined inside a block of conditional statement
+//Block Scope
+// function myPrint() {
+//   if (true) {
+//     var x = 90;
+//     let y = 70;
+//     const z = 30;
+//     console.log(y);
+//     console.log(z);
+//   }
+//   console.log(x);
+// }
+
+// myPrint();
+
+//var can be used as a function scope
+//let and const cannot be used as function scope, it can only be ued inside the defined block
+
+//////DOM
+// console.log(document.body);
+
+//Id Selector
+let result = document.getElementById("hello");
+
+result.innerText = "I Love JS!";
+result.style.backgroundColor = "red";
+result.style.color = "white";
+result.style.textAlign = "center";
+console.log(result);
+
+//Class Selector
+let output = document.getElementsByClassName("myClass")[0];
+output.innerText = "How are you?";
+output.style.backgroundColor = "aqua";
+output.style.color = "green";
+output.style.textAlign = "center";
+console.log(output);
+
+//Class Selector
+let ans = document.getElementsByClassName("myClass");
+ans[1].innerText = "Who are you?";
+ans[1].style.backgroundColor = "blue";
+ans[1].style.color = "white";
+ans[1].style.textAlign = "center";
+console.log(ans);
+
+//Tag Selector
+let res = document.getElementsByTagName("span");
+
+res[0].style.backgroundColor = "brown";
+res[0].style.color = "white";
+res[0].style.textAlign = "center";
+
+console.log(res);
+
+let newRes = document.getElementsByTagName("span");
+
+newRes[1].style.backgroundColor = "aquamarine";
+newRes[1].style.color = "red";
+newRes[1].style.textAlign = "center";
+
+console.log(newRes);
+
+//////
+
+let x = document.getElementsByName("email");
+// let y = document.getElementsByName("password");
+console.log(x);
+
+let y = document.querySelector("#add");
+y.style.backgroundColor = "blue";
+y.style.color = "white";
+y.style.padding = "2vmax 4vmax";
+y.style.cursor = "pointer";
+y.style.border = "none";
+
+y.setAttribute("class", "meroClass");
+
+let z = document.querySelector(".delete");
+z.style.backgroundColor = "red";
+z.style.color = "white";
+z.style.padding = "2vmax 4vmax";
+z.style.cursor = "pointer";
+z.style.border = "none";
+
+// y.addEventListener("click", () => {
+//   let display = document.createElement("h1");
+//   display.innerText = "This is a new H1";
+//   document.body.append(display);
+// });
+
+function addTask() {
+  let display = document.createElement("h1");
+  display.innerText = "This is a new H1";
+  document.body.append(display);
+}
+y.onclick = addTask;
+
+function deleteTask(){
+  let h1 = document.querySelector("h1");
+  h1.remove();
 }
 
-myFunction();
+z.onclick = deleteTask;
+
+// let display  = document.createElement("h1");
+// display.innerText = "This is a new H1";
+// document.body.append(display);
+// document.body.prepend(display);
