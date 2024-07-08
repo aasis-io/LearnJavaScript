@@ -491,10 +491,23 @@ ARRAY
 
 // console.log(`your full and final payment is:${result}`);
 
-function convert() {
-  const meterInput = document.getElementById("meterInput").value;
-  const result = meterInput * 3.28084;
-  document.getElementById(
-    "result"
-  ).textContent = `${meterInput} meters is equal to ${result.toFixed(2)} feet`;
+// function convert() {
+//   const meterInput = document.getElementById("meterInput").value;
+//   const result = meterInput * 3.28084;
+//   document.getElementById(
+//     "result"
+//   ).textContent = `${meterInput} meters is equal to ${result.toFixed(2)} feet`;
+// }
+
+function myFunction(){
+  let a = prompt("Enter first number?");
+  let b = prompt("Enter second number?");
+
+  let result = Number(a) + Number(b);
+  if(result){
+    alert(`The sum of two numbers is: ${result}`);
+  }
+
 }
+
+myFunction();
