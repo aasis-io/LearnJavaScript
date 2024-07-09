@@ -555,68 +555,68 @@ ARRAY
 // console.log(document.body);
 
 //Id Selector
-let result = document.getElementById("hello");
+// let result = document.getElementById("hello");
 
-result.innerText = "I Love JS!";
-result.style.backgroundColor = "red";
-result.style.color = "white";
-result.style.textAlign = "center";
-console.log(result);
+// result.innerText = "I Love JS!";
+// result.style.backgroundColor = "red";
+// result.style.color = "white";
+// result.style.textAlign = "center";
+// console.log(result);
 
-//Class Selector
-let output = document.getElementsByClassName("myClass")[0];
-output.innerText = "How are you?";
-output.style.backgroundColor = "aqua";
-output.style.color = "green";
-output.style.textAlign = "center";
-console.log(output);
+// //Class Selector
+// let output = document.getElementsByClassName("myClass")[0];
+// output.innerText = "How are you?";
+// output.style.backgroundColor = "aqua";
+// output.style.color = "green";
+// output.style.textAlign = "center";
+// console.log(output);
 
-//Class Selector
-let ans = document.getElementsByClassName("myClass");
-ans[1].innerText = "Who are you?";
-ans[1].style.backgroundColor = "blue";
-ans[1].style.color = "white";
-ans[1].style.textAlign = "center";
-console.log(ans);
+// //Class Selector
+// let ans = document.getElementsByClassName("myClass");
+// ans[1].innerText = "Who are you?";
+// ans[1].style.backgroundColor = "blue";
+// ans[1].style.color = "white";
+// ans[1].style.textAlign = "center";
+// console.log(ans);
 
-//Tag Selector
-let res = document.getElementsByTagName("span");
+// //Tag Selector
+// let res = document.getElementsByTagName("span");
 
-res[0].style.backgroundColor = "brown";
-res[0].style.color = "white";
-res[0].style.textAlign = "center";
+// res[0].style.backgroundColor = "brown";
+// res[0].style.color = "white";
+// res[0].style.textAlign = "center";
 
-console.log(res);
+// console.log(res);
 
-let newRes = document.getElementsByTagName("span");
+// let newRes = document.getElementsByTagName("span");
 
-newRes[1].style.backgroundColor = "aquamarine";
-newRes[1].style.color = "red";
-newRes[1].style.textAlign = "center";
+// newRes[1].style.backgroundColor = "aquamarine";
+// newRes[1].style.color = "red";
+// newRes[1].style.textAlign = "center";
 
-console.log(newRes);
+// console.log(newRes);
 
-//////
+// //////
 
-let x = document.getElementsByName("email");
-// let y = document.getElementsByName("password");
-console.log(x);
+// let x = document.getElementsByName("email");
+// // let y = document.getElementsByName("password");
+// console.log(x);
 
-let y = document.querySelector("#add");
-y.style.backgroundColor = "blue";
-y.style.color = "white";
-y.style.padding = "2vmax 4vmax";
-y.style.cursor = "pointer";
-y.style.border = "none";
+// let y = document.querySelector("#add");
+// y.style.backgroundColor = "blue";
+// y.style.color = "white";
+// y.style.padding = "2vmax 4vmax";
+// y.style.cursor = "pointer";
+// y.style.border = "none";
 
-y.setAttribute("class", "meroClass");
+// y.setAttribute("class", "meroClass");
 
-let z = document.querySelector(".delete");
-z.style.backgroundColor = "red";
-z.style.color = "white";
-z.style.padding = "2vmax 4vmax";
-z.style.cursor = "pointer";
-z.style.border = "none";
+// let z = document.querySelector(".delete");
+// z.style.backgroundColor = "red";
+// z.style.color = "white";
+// z.style.padding = "2vmax 4vmax";
+// z.style.cursor = "pointer";
+// z.style.border = "none";
 
 // y.addEventListener("click", () => {
 //   let display = document.createElement("h1");
@@ -624,21 +624,123 @@ z.style.border = "none";
 //   document.body.append(display);
 // });
 
-function addTask() {
-  let display = document.createElement("h1");
-  display.innerText = "This is a new H1";
-  document.body.append(display);
-}
-y.onclick = addTask;
+// function addTask() {
+//   let display = document.createElement("h1");
+//   display.innerText = "This is a new H1";
+//   document.body.append(display);
+// }
+// y.onclick = addTask;
 
-function deleteTask(){
-  let h1 = document.querySelector("h1");
-  h1.remove();
-}
+// function deleteTask(){
+//   let h1 = document.querySelector("h1");
+//   h1.remove();
+// }
 
-z.onclick = deleteTask;
+// z.onclick = deleteTask;
 
 // let display  = document.createElement("h1");
 // display.innerText = "This is a new H1";
 // document.body.append(display);
 // document.body.prepend(display);
+
+// let btn  = document.querySelectorAll("button");
+// // console.log(btn);
+// btn[0].style.backgroundColor = "blue";
+// btn[0].style.border = "none";
+// btn[0].style.borderRadius = "6px";
+// btn[0].style.color = "white";
+// btn[0].style.padding = "12px 16px";
+
+// btn[1].style.backgroundColor = "red";
+// btn[1].style.border = "none";
+// btn[1].style.borderRadius = "6px";
+// btn[1].style.color = "white";
+// btn[1].style.padding = "12px 16px";
+
+// function myFunction(name, age) {
+//   console.log(`My name is ${name}, and I am ${age} years old.`);
+// }
+// myFunction("Ashish Thapa", 21);
+
+//Fat Arrow Function
+// const meroFunction = (name, age) => {
+//   console.log(`My name is ${name}, and I am ${age} years old.`);
+// };
+// meroFunction("Ashish Thapa", 21);
+
+//Advance Array Method
+let arr = [1, 4, 5, 6, 7, 8, 9, 5, 4];
+
+//find
+// const myFunction = (value, index) => {
+//   return value > 6;
+// };
+
+// let output = arr.find((value, index) => {
+//   return value > 6;
+// });
+
+// let output = arr.find((value, index) => value > 6);
+
+// //filter
+// let output = arr.filter((value, index) => value > 6);
+// console.log(output);
+
+//
+const products = [
+  { id: 1, name: "Dr Martin", price: 5000, inStock: true },
+  { id: 2, name: "SB Dunk", price: 7000, inStock: false },
+  { id: 3, name: "Air Force 1", price: 10000, inStock: true },
+  { id: 4, name: "Travis Scott", price: 9000, inStock: true },
+];
+
+//find
+// let answer = products.find((value, index) => value.inStock);
+// console.log(answer);
+
+// //Filter
+// let answer = products.filter((value, index) => !value.inStock);
+// console.log(answer);
+
+// // //Some
+// let answer = products.some((value, index) => !value.inStock);
+// console.log(answer);
+
+// let output = arr.some((value, index) => value > 6);
+// console.log(output);
+
+// //every
+// let answer = products.every((value, index) => !value.inStock);
+// console.log(answer);
+
+// let output = arr.every((value, index) => value > 6);
+// console.log(output);
+
+//foreach
+//it cannot return array
+// let answer = products.forEach((value, index) => !value.inStock);
+// console.log(answer);
+
+// let output = arr.forEach((value, index) => value * 2);
+// console.log(output);
+
+//map
+// let answer = products.map((value, index) => value.inStock);
+// console.log(answer);
+
+// let output = arr.map((value, index) => value * 2);
+// console.log(output);
+
+// let answer = products.map((value, index) => value.name);
+// let display = document.createElement("h2");
+// display.innerText = answer;
+// document.body.prepend(display);
+
+//REDUCE
+
+//map
+let output = arr.reduce((accum, curvalue) => accum + curvalue);
+console.log(output);
+
+let answer = products.reduce((total, curvalue) => total + curvalue.price, 0);
+console.log(answer); //Single Return
