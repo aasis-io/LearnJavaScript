@@ -669,7 +669,7 @@ ARRAY
 // meroFunction("Ashish Thapa", 21);
 
 //Advance Array Method
-let arr = [1, 4, 5, 6, 7, 8, 9, 5, 4];
+// let arr = [1, 4, 5, 6, 7, 8, 9, 5, 4];
 
 //find
 // const myFunction = (value, index) => {
@@ -687,12 +687,12 @@ let arr = [1, 4, 5, 6, 7, 8, 9, 5, 4];
 // console.log(output);
 
 //
-const products = [
-  { id: 1, name: "Dr Martin", price: 5000, inStock: true },
-  { id: 2, name: "SB Dunk", price: 7000, inStock: false },
-  { id: 3, name: "Air Force 1", price: 10000, inStock: true },
-  { id: 4, name: "Travis Scott", price: 9000, inStock: true },
-];
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 5000, inStock: true },
+//   { id: 2, name: "SB Dunk", price: 7000, inStock: false },
+//   { id: 3, name: "Air Force 1", price: 10000, inStock: true },
+//   { id: 4, name: "Travis Scott", price: 9000, inStock: true },
+// ];
 
 //find
 // let answer = products.find((value, index) => value.inStock);
@@ -739,8 +739,70 @@ const products = [
 //REDUCE
 
 //map
-let output = arr.reduce((accum, curvalue) => accum + curvalue);
-console.log(output);
+// let output = arr.reduce((accum, curvalue) => accum + curvalue);
+// console.log(output);
 
-let answer = products.reduce((total, curvalue) => total + curvalue.price, 0);
-console.log(answer); //Single Return
+// let answer = products.reduce((total, curvalue) => total + curvalue.price, 0);
+// console.log(answer); //Single Return
+
+// let heading = document.getElementById("heading");
+// let box = document.getElementById("box1");
+// let btn = document.getElementById("btn");
+
+// btn.style.backgroundColor = "aqua";
+// btn.style.padding = "12px 16px";
+// btn.style.border = "none";
+// btn.style.borderRadius = "6px";
+// btn.style.cursor = "pointer";
+
+// btn.addEventListener("click", () => {
+//   btn.style.backgroundColor = "blue";
+//   btn.style.color = "white";
+//   console.log("clicked");
+// });
+
+// btn.addEventListener("mouseover", () => {
+//     btn.style.transform = "scale(1.1)";
+//   });
+
+//   btn.addEventListener("mouseout", () => {
+//     btn.style.transform = "scale(1)";
+//   });
+
+// btn.addEventListener('contextmenu',(e)=>{
+//   btn.style.backgroundColor="green";
+
+//   e.preventDefault();
+//   // window.alert("ehhhh");
+// })
+
+// //doesnot let to open the inspect menu list
+// window.addEventListener("contextmenu",(e)=>{
+
+//   e.preventDefault();
+// })
+
+//it shows the coordinate of x and y of mouse clicked
+// window.addEventListener('click',(e)=>{
+//   console.log(e.clientX);
+//   console.log(e.clientY);
+// })
+
+// let input =  document.querySelector("input");
+// input.addEventListener('change',(e)=>{
+//   console.log(e.target.value);
+//   console.log("changing");
+//   console.log(input.value);
+// })
+
+console.log(Math.floor(4.9));
+console.log(Math.ceil(6.1));
+
+console.log(Math.round(6.2));
+
+let randomint = Math.floor(Math.random() * (100 - 0) + 0);
+console.log(randomint);
+
+console.log(Math.sqrt(8));
+
+console.log(Math.pow(2, 2));
