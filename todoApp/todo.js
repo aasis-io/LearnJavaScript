@@ -5,7 +5,9 @@ let button = document.getElementById("addBtn");
 let form = document.querySelector("form");
 let container = document.querySelector(".container");
 
-const tasks = [];
+const tasks = localStorage.getItem("task")
+  ? JSON.parse(localStorage.getItem("task"))
+  : [];
 
 const showAllTasks = () => {
   tasks.forEach((value, index) => {
@@ -27,10 +29,19 @@ const showAllTasks = () => {
     btn.setAttribute("class", "deleteBtn");
     btn.innerText = "-";
 
+    btn.addEventListener("click", () => {
+      removeTasks();
+      tasks.splice(index, 1);
+      localStorage.removeItem("task", JSON.stringify(tasks));
+      showAllTasks();
+    });
+
     div.append(btn);
     container.append(div);
   });
 };
+showAllTasks();
+
 
 const removeTasks = () => {
   tasks.forEach((value) => {
@@ -46,6 +57,6 @@ form.addEventListener("submit", (e) => {
     title: title.value,
     description: description.value,
   });
+  localStorage.setItem("task", JSON.stringify(tasks));
   showAllTasks();
-  console.log(tasks);
 });
