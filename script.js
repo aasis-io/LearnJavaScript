@@ -785,3 +785,96 @@ ARRAY
 //it shows the coordinate of x and y of mouse clicked
 // window.addEventListener('click',(e)=>{
 
+// const myFunc = () => {
+//   console.log("I love JS!");
+// };
+
+//setTimeout
+// setTimeout(() => {
+//   console.log("I love JS!");
+// }, 5000);
+
+//setInterval
+// setInterval(() => {
+//   console.log("I love JS!");
+// }, 1000);
+
+// const intervalID = setInterval(() => {
+//   console.log("I love JS!");
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(intervalID);
+// }, 5000);
+
+// const Time = () => {
+//   const d = new Date();
+//   const hour = d.getHours();
+//   const minute = d.getMinutes();
+//   const second = d.getSeconds();
+//   console.log(`${hour} : ${minute} : ${second}`);
+// };
+
+// setInterval(Time, 1000);
+
+// const updateClock = () => {
+//   const clock = document.querySelector(".clock");
+//   const now = new Date();
+//   const hour = now.getHours().toString().padStart(2, "0");
+//   const minute = now.getMinutes().toString().padStart(2, "0");
+//   const second = now.getSeconds().toString().padStart(2, "0");
+
+//   clock.innerHTML = `${hour} : ${minute} : ${second}`;
+// };
+
+// setInterval(updateClock, 1000);
+
+//OOP in JAVASCRIPT
+
+// function Person(name, age, address) {
+//   this.name = name;
+//   this.age = age;
+//   this.address = address;
+//   this.greeting = function () {
+//     let greet = `Hello, my name is ${this.name}. I am ${this.age} years old, and i live in ${this.address}`;
+//     return greet;
+//   };
+// }
+
+// const person = new Person("Ram Thapa", 21, "Thankot");
+// const person2 = new Person("Hari Thapa", 23, "Kalanki");
+
+// console.log(person.greeting());
+// console.log(person2.greeting());
+
+function BankAccount(customerName, balance = 0) {
+  this.customerName = customerName;
+  this.balance = balance;
+  this.accountNumber = Date.now();
+
+  this.deposit = function (amount) {
+    this.balance += amount;
+  };
+  this.withdraw = function (amount) {
+    this.balance -= amount;
+  };
+}
+
+// const ramAcc = new BankAccount("Ram", 1000);
+// ramAcc.deposit(4000);
+// ramAcc.withdraw(2000);
+
+// console.log(ramAcc);
+
+const addForm = document.querySelector("#createAccount");
+const customerName = document.querySelector("#customerName");
+const balance = document.querySelector("#balance");
+
+let accounts = [];
+
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = new BankAccount(customerName.value, +balance.value);
+  accounts.push(account);
+  console.log(accounts);
+});
