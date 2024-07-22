@@ -847,18 +847,18 @@ ARRAY
 // console.log(person.greeting());
 // console.log(person2.greeting());
 
-function BankAccount(customerName, balance = 0) {
-  this.customerName = customerName;
-  this.balance = balance;
-  this.accountNumber = Date.now();
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
 
-  this.deposit = function (amount) {
-    this.balance += amount;
-  };
-  this.withdraw = function (amount) {
-    this.balance -= amount;
-  };
-}
+//   this.deposit = function (amount) {
+//     this.balance += amount;
+//   };
+//   this.withdraw = function (amount) {
+//     this.balance -= amount;
+//   };
+// }
 
 // const ramAcc = new BankAccount("Ram", 1000);
 // ramAcc.deposit(4000);
@@ -866,41 +866,85 @@ function BankAccount(customerName, balance = 0) {
 
 // console.log(ramAcc);
 
-const addForm = document.querySelector("#createAccount");
-const customerName = document.querySelector("#customerName");
-const balance = document.querySelector("#balance");
+// const addForm = document.querySelector("#createAccount");
+// const customerName = document.querySelector("#customerName");
+// const balance = document.querySelector("#balance");
 
-const deopsitForm = document.querySelector("#deopsitForm");
-const accountNumber = document.querySelector("#accountNumber");
-const amount = document.querySelector("#amount");
+// const deopsitForm = document.querySelector("#deopsitForm");
+// const accountNumber = document.querySelector("#accountNumber");
+// const amount = document.querySelector("#amount");
 
-const withdrawForm = document.querySelector("#withdrawForm");
-const wAccountNumber = document.querySelector("#wAccountNumber");
-const wAmount = document.querySelector("#wAmount");
+// const withdrawForm = document.querySelector("#withdrawForm");
+// const wAccountNumber = document.querySelector("#wAccountNumber");
+// const wAmount = document.querySelector("#wAmount");
 
-let accounts = [];
+// let accounts = [];
 
-addForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let account = new BankAccount(customerName.value, +balance.value);
-  accounts.push(account);
-  console.log(accounts);
-});
+// addForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let account = new BankAccount(customerName.value, +balance.value);
+//   accounts.push(account);
+//   console.log(accounts);
+// });
 
-deopsitForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let account = accounts.find(
-    (account) => account.accountNumber === +accountNumber.value
-  );
-  account.deposit(+amount.value);
-  console.log(accounts);
-});
+// deopsitForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let account = accounts.find(
+//     (account) => account.accountNumber === +accountNumber.value
+//   );
+//   account.deposit(+amount.value);
+//   console.log(accounts);
+// });
 
-withdrawForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let account = accounts.find(
-    (account) => account.accountNumber === +accountNumber.value
-  );
-  account.withdraw(+wAmount.value);
-  console.log(accounts);
-});
+// withdrawForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let account = accounts.find(
+//     (account) => account.accountNumber === +accountNumber.value
+//   );
+//   account.withdraw(+wAmount.value);
+//   console.log(accounts);
+// });
+
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
+// }
+
+// const sitaAccount = new BankAccount("Sita Devi", 40000);
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// const ramAccount = new BankAccount("Ram Thapa", 5000);
+// ramAccount.deposit(1000);
+// console.log(ramAccount);
+
+// const hariAccount = new BankAccount("Hari Sharan", 5000);
+// hariAccount.deposit(1000);
+// console.log(hariAccount);
+
+class BankAccount {
+  constructor(customerName, balance = 0) {
+    this.customerName = customerName;
+    this.balance = balance;
+    this.accountNumber = Math.floor(Math.random() * 10000000000);
+  }
+  deposit(amount) {
+    this.balance += amount;
+  }
+  withdraw(amount) {
+    this.balance -= amount;
+  }
+}
+
+const ramAccount = new BankAccount("Ram Thapa", 5000);
+console.log(ramAccount);
+
+const hariAccount = new BankAccount("Hari Sharan", 5000);
+console.log(hariAccount);
