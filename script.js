@@ -870,11 +870,37 @@ const addForm = document.querySelector("#createAccount");
 const customerName = document.querySelector("#customerName");
 const balance = document.querySelector("#balance");
 
+const deopsitForm = document.querySelector("#deopsitForm");
+const accountNumber = document.querySelector("#accountNumber");
+const amount = document.querySelector("#amount");
+
+const withdrawForm = document.querySelector("#withdrawForm");
+const wAccountNumber = document.querySelector("#wAccountNumber");
+const wAmount = document.querySelector("#wAmount");
+
 let accounts = [];
 
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let account = new BankAccount(customerName.value, +balance.value);
   accounts.push(account);
+  console.log(accounts);
+});
+
+deopsitForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = accounts.find(
+    (account) => account.accountNumber === +accountNumber.value
+  );
+  account.deposit(+amount.value);
+  console.log(accounts);
+});
+
+withdrawForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let account = accounts.find(
+    (account) => account.accountNumber === +accountNumber.value
+  );
+  account.withdraw(+wAmount.value);
   console.log(accounts);
 });
