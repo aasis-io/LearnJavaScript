@@ -929,47 +929,80 @@ ARRAY
 // hariAccount.deposit(1000);
 // console.log(hariAccount);
 
+// class BankAccount {
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Math.floor(Math.random() * 10000000000);
+//   }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   constructor(customerName, balance = 0) {
+//     super(customerName, balance)
+//   }
+//   takeBusinessLoan(amount, taxRate){
+//     let ans = amount + (amount * taxRate)/100;
+//     console.log(`Your business loan with interest is: ${ans}`);
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   constructor(customerName, balance = 0) {
+//     super(customerName, balance)
+//   }
+//   takeBusinessLoan(amount, taxRate){
+//     let ans = amount + (amount * taxRate)/100;
+//     console.log(`Your business loan with interest is: ${ans}`);
+//   }
+// }
+
+// // const ramAccount = new BankAccount("Ram Thapa", 5000);
+// const ramAccount = new CurrentAccount("Ram Thapa", 5000);
+// ramAccount.takeBusinessLoan(5000, 13);
+// console.log(ramAccount);
+
+// const nareshAccount = new CurrentAccount("Ram Thapa", 5000);
+// nareshAccount.takeBusinessLoan(5000, 13);
+
+//Encapsulation
+
 class BankAccount {
+  customerName;
+  #balance;
+  accountNumber;
   constructor(customerName, balance = 0) {
     this.customerName = customerName;
-    this.balance = balance;
+    this.#balance = balance;
     this.accountNumber = Math.floor(Math.random() * 10000000000);
   }
+
   deposit(amount) {
-    this.balance += amount;
+    this.#balance += amount;
   }
+
   withdraw(amount) {
-    this.balance -= amount;
+    this.#balance -= amount;
+  }
+  setBalance(amount){
+    this.#balance = amount;
+  }
+  setBalance(amount){
+    this.#balance = amount;
+  }
+
+  getBalance(){
+    return this.#balance;
   }
 }
 
-
-class CurrentAccount extends BankAccount {
-  constructor(customerName, balance = 0) {
-    super(customerName, balance)
-  }
-  takeBusinessLoan(amount, taxRate){
-    let ans = amount + (amount * taxRate)/100;
-    console.log(`Your business loan with interest is: ${ans}`);
-  }
-}
-
-class SavingAccount extends BankAccount {
-  constructor(customerName, balance = 0) {
-    super(customerName, balance)
-  }
-  takeBusinessLoan(amount, taxRate){
-    let ans = amount + (amount * taxRate)/100;
-    console.log(`Your business loan with interest is: ${ans}`);
-  }
-}
-
-
-// const ramAccount = new BankAccount("Ram Thapa", 5000);
-const ramAccount = new CurrentAccount("Ram Thapa", 5000);
-ramAccount.takeBusinessLoan(5000, 13);
-console.log(ramAccount);
-
-
-const nareshAccount = new CurrentAccount("Ram Thapa", 5000);
-nareshAccount.takeBusinessLoan(5000, 13);
+const ashishAccount = new BankAccount("Ashish", 7000);
+// ashishAccount.#balance = 9000;
+ashishAccount.setBalance(6000);
+console.log(ashishAccount);
