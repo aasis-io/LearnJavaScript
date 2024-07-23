@@ -973,36 +973,63 @@ ARRAY
 
 //Encapsulation
 
-class BankAccount {
-  customerName;
-  #balance;
-  accountNumber;
-  constructor(customerName, balance = 0) {
-    this.customerName = customerName;
-    this.#balance = balance;
-    this.accountNumber = Math.floor(Math.random() * 10000000000);
+// class BankAccount {
+//   customerName;
+//   #balance;
+//   accountNumber;
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.#balance = balance;
+//     this.accountNumber = Math.floor(Math.random() * 10000000000);
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//   }
+//   setBalance(amount){
+//     this.#balance = amount;
+//   }
+//   setBalance(amount){
+//     this.#balance = amount;
+//   }
+
+//   getBalance(){
+//     return this.#balance;
+//   }
+// }
+
+// const ashishAccount = new BankAccount("Ashish", 7000);
+// // ashishAccount.#balance = 9000;
+// ashishAccount.setBalance(6000);
+// console.log(ashishAccount);
+
+// class Configure {
+//   static username = "Naresh Kunwar";
+//   static email = "kunwarn@gmail.com";
+// }
+
+// console.log(Configure.email);
+
+class User {
+  constructor(name, address, age) {
+    this.name = name;
+    this.address = address;
+    this.age = age;
   }
 
-  deposit(amount) {
-    this.#balance += amount;
-  }
-
-  withdraw(amount) {
-    this.#balance -= amount;
-  }
-  setBalance(amount){
-    this.#balance = amount;
-  }
-  setBalance(amount){
-    this.#balance = amount;
-  }
-
-  getBalance(){
-    return this.#balance;
+  static compareByAge(a, b){
+    return a.age - b.age;
   }
 }
 
-const ashishAccount = new BankAccount("Ashish", 7000);
-// ashishAccount.#balance = 9000;
-ashishAccount.setBalance(6000);
-console.log(ashishAccount);
+let user1 = new User("Ashish", "Satungal", 21);
+let user2 = new User("Naresh", "Kirtipur", 22);
+
+const users = [user1, user2];
+// users.sort((a, b) => a.age - b.age);
+users.sort(User.compareByAge);
+console.log(users);
