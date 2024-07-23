@@ -943,8 +943,33 @@ class BankAccount {
   }
 }
 
-const ramAccount = new BankAccount("Ram Thapa", 5000);
+
+class CurrentAccount extends BankAccount {
+  constructor(customerName, balance = 0) {
+    super(customerName, balance)
+  }
+  takeBusinessLoan(amount, taxRate){
+    let ans = amount + (amount * taxRate)/100;
+    console.log(`Your business loan with interest is: ${ans}`);
+  }
+}
+
+class SavingAccount extends BankAccount {
+  constructor(customerName, balance = 0) {
+    super(customerName, balance)
+  }
+  takeBusinessLoan(amount, taxRate){
+    let ans = amount + (amount * taxRate)/100;
+    console.log(`Your business loan with interest is: ${ans}`);
+  }
+}
+
+
+// const ramAccount = new BankAccount("Ram Thapa", 5000);
+const ramAccount = new CurrentAccount("Ram Thapa", 5000);
+ramAccount.takeBusinessLoan(5000, 13);
 console.log(ramAccount);
 
-const hariAccount = new BankAccount("Hari Sharan", 5000);
-console.log(hariAccount);
+
+const nareshAccount = new CurrentAccount("Ram Thapa", 5000);
+nareshAccount.takeBusinessLoan(5000, 13);
