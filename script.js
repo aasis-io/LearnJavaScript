@@ -1014,22 +1014,104 @@ ARRAY
 
 // console.log(Configure.email);
 
-class User {
-  constructor(name, address, age) {
-    this.name = name;
-    this.address = address;
-    this.age = age;
-  }
+//
 
-  static compareByAge(a, b){
-    return a.age - b.age;
-  }
-}
+// console.log("Hello World!");
 
-let user1 = new User("Ashish", "Satungal", 21);
-let user2 = new User("Naresh", "Kirtipur", 22);
+// function Display() {
+//   for (let i = 0; i < 100; i++) {
+//     console.log(i);
+//   }
+// }
+// Display();
 
-const users = [user1, user2];
-// users.sort((a, b) => a.age - b.age);
-users.sort(User.compareByAge);
-console.log(users);
+// setTimeout(() => {
+//   alert("I love JS!");
+// });
+
+// console.log("Hey Shiva Ji!");
+
+//  Callback
+
+// function Sum(a, b, cd) {
+//   const ans = a + b;
+//   cd(ans);
+// }
+
+// function Display(result) {
+//   const h1 = document.createElement("h1");
+//   h1.innerText = `The result of the sum is :${result}`;
+// }
+
+// Sum(4, 5, Display);
+// arr.forEach(() => {});
+
+// let arr = [4, 5, 6, 7, 8, 9, 3, 2, 1];
+
+// function Calculate(arr = [], cb) {
+//   let ans = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = cb(arr[i]);
+//     arr.push(element);
+//   }
+//   console.log(ans);
+// }
+
+// const Multiply = (a) => {
+//   return a * 10;
+// };
+
+// const Divide = (a) => {
+//   return a / 10;
+// };
+
+// Calculate(arr, (a) => a * 10);
+// Calculate(arr, (a) => a / 10);
+
+////// Call Back
+// let products = [];
+// const AddProduct = (cb) => {
+//   setTimeout(() => {
+//     products.push(
+//       {
+//         id: 1,
+//         name: "Product 1",
+//         price: 8000,
+//         inStock: true,
+//       },
+//       {
+//         id: 1,
+//         name: "Product 1",
+//         price: 8000,
+//         inStock: true,
+//       }
+//     );
+//     console.log(products);
+//     setTimeout(() => {
+//       console.log("Callback");
+//     }, 5000);
+//     cb();
+//   }, 4000);
+// };
+
+// const DisplayProduct = () => {
+//   setInterval(() => {
+//     products.forEach((products) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = products.name;
+//       document.body.append(h1);
+//     });
+//   }, 1000);
+// };
+
+// AddProduct(DisplayProduct);
+
+///// Promise is a JS object
+
+const res = new Promise((resolve, rejected) => {
+  rejected("Promise rejected!");
+  resolve("Promise fulfilled!");
+});
+
+
+res.then((param) => console.log(param)).catch((error) => console.log(error));
