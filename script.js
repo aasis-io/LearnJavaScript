@@ -1108,10 +1108,50 @@ ARRAY
 
 ///// Promise is a JS object
 
-const res = new Promise((resolve, rejected) => {
-  rejected("Promise rejected!");
-  resolve("Promise fulfilled!");
-});
+// const res = new Promise((resolve, rejected) => {
+//   let success = false;
+//   if (success) {
+//     resolve("Promise Fullfilled!");
+//   } else {
+//     rejected("Promise Rejeceted!");
+//   }
+// });
 
+// res.then((param) => console.log(param)).catch((error) => console.log(error));
 
-res.then((param) => console.log(param)).catch((error) => console.log(error));
+//fetch api
+// const fetchedData = () => {
+//   fetch(`https://catfact.ninja/fact`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = data.fact;
+//       document.body.append(h1);
+//     })
+//     .catch((error) => console.log(error));
+// };
+
+// fetchedData();
+
+const fetchedData = async () => {
+  try {
+    const res = await fetch(`https://catfact.ninja/facts`);
+    const data = await res.json();
+    // const h1 = document.createElement("h1");
+    // h1.innerText = data.fact;
+    // document.body.append(h1);
+    const facts = data.data;
+    facts.forEach((value, index) => {
+      const h1 = document.createElement("h1");
+      h1.innerText = value.fact;
+      document.body.append(h1);
+    });
+    console.log(facts);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+fetchedData();
+
+// throw new Error("Invalid Input!");

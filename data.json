@@ -1,0 +1,21 @@
+{
+    "person": {
+        "name": "Ram Babu Gurung",
+        "age": 23,
+        "isMarried": true
+    },
+    "products": [
+        {
+            "id": 1,
+            "productName": "Gurkha Pant",
+            "price": "4500",
+            "inStock": true
+        },
+        {
+            "id": 2,
+            "productName": "Cargo Pant",
+            "price": "3500",
+            "inStock": true
+        }
+    ]
+}
