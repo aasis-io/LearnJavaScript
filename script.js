@@ -1133,25 +1133,47 @@ ARRAY
 
 // fetchedData();
 
-const fetchedData = async () => {
+// const fetchedData = async () => {
+//   try {
+//     const res = await fetch(`https://catfact.ninja/facts`);
+//     const data = await res.json();
+//     // const h1 = document.createElement("h1");
+//     // h1.innerText = data.fact;
+//     // document.body.append(h1);
+//     const facts = data.data;
+//     facts.forEach((value, index) => {
+//       const h1 = document.createElement("h1");
+//       h1.innerText = value.fact;
+//       document.body.append(h1);
+//     });
+//     console.log(facts);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// fetchedData();
+
+// throw new Error("Invalid Input!");
+
+const fetchData = async () => {
   try {
     const res = await fetch(`https://catfact.ninja/facts`);
     const data = await res.json();
+    // console.log(data);
     // const h1 = document.createElement("h1");
     // h1.innerText = data.fact;
     // document.body.append(h1);
     const facts = data.data;
     facts.forEach((value, index) => {
-      const h1 = document.createElement("h1");
-      h1.innerText = value.fact;
-      document.body.append(h1);
+      const fact = value.fact;
+      const h3 = document.createElement("h3");
+      h3.innerText = fact;
+      document.body.append(h3);
     });
-    console.log(facts);
   } catch (error) {
     console.log(error);
   }
 };
 
-fetchedData();
-
-// throw new Error("Invalid Input!");
+fetchData();
